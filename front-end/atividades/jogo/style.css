@@ -1,0 +1,27 @@
+body {
+    /* Gradiente vertical: Vermelho no topo, Preto no meio, Dourado no final */
+    background: linear-gradient(to bottom, #c41e1e, #080808, #e8c97a);
+    
+    /* Garante que o fundo ocupe pelo menos a altura total da tela */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    
+    /* Usa a cor 'ash' do seu guia para o texto principal ficar legível */
+    color: #e8e0d0; 
+    font-family: sans-serif;
+}
+
+/* * Opcional: Se você não quiser no fundo do site todo, mas sim em uma div 
+ * específica (como uma barra lateral decorativa), use a classe abaixo:
+ */
+.barra-vertical {
+    background: linear-gradient(to bottom, #c41e1e, #080808, #e8c97a);
+    width: 24px;         /* Largura da barra */
+    min-height: 300px;   /* Altura da barra */
+    border-radius: 8px;
+}
+
+.backgroundGoW {
+    background-image: url(https://images.wallpapersden.com/image/download/god-of-war-ragnaroek-background-2022_bWptbmiUmZqaraWkpJRobWllrWdma2U.jpg);
+}

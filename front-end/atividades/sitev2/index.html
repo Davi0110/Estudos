@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Davi Coelho Almeida - Portfólio</title>
+    <style>
+        /* Design System: Militar Moderno & Apple-like Spacing */
+        :root {
+            --bg-color: #0d0f0e;        /* Preto profundo com toque oliva */
+            --military-green: #4b634d;  /* Verde militar equilibrado (Muted Forest) */
+            --accent-green: #84a98c;    /* Verde sutil para contraste em textos */
+            --text-primary: #f0f5f1;    /* Off-white esverdeado para conforto visual */
+            --text-secondary: #8a958e;  /* Cinza oliva para hierarquia */
+            --glass-border: rgba(132, 169, 140, 0.1); /* Bordas tipo vidro fosco */
+            --max-width: 800px;         /* Layout mais amplo, porém contido */
+        }
+
+        /* Base & Smoothing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased; /* Suavização de fonte estilo macOS */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 80px 24px; /* Respiro amplo no topo e laterais */
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        /* Header: Minimalismo Amplo */
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em; /* Kerning estilo Apple */
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--military-green);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .intro-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, var(--glass-border), transparent);
+            margin: 40px 0;
+        }
+
+        /* Seções e Títulos */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 48px; /* Espaçamento amplo entre blocos de conteúdo */
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--military-green);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: var(--glass-border);
+            margin-left: 20px;
+        }
+
+        /* Conteúdo das Seções */
+        p {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            opacity: 0.9;
+        }
+
+        /* Listas Profissionais */
+        ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Links: Sutileza no Verde */
+        a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.7; /* Interação sutil sem mudar cores */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--glass-border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+
+        /* Detalhe de "Dot" militar */
+        .status-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--military-green);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p class="subtitle">Desenvolvedor Front-End</p>
+            <h1>Davi Coelho Almeida</h1>
+            <p class="intro-text">Apaixonado por tecnologia e design. Bem-vindo à minha página de links! Aqui você encontrará meus principais projetos e redes sociais. Conecte-se comigo.</p>
+            <hr>
+        </header>
+
+        <main>
+            <section>
+                <h2 id="sobre-mim">Descrição sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima et eveniet exercitationem culpa repellat aliquam odio voluptatem nostrum maxime, dolorem possimus omnis beatae quis quaerat. Iste dignissimos facilis nostrum perferendis?</p>
+            </section>
+
+            <section>
+                <h2 id="redes-sociais">Minhas redes sociais</h2>
+                <ul>
+                    <li>
+                        <span>GitHub</span>
+                        <a href="https://github.com/Davi0110" target="_blank">Acessar perfil</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="projetos">Meus projetos anteriores</h2>
+                <ul>
+                    <li>
+                        <span>Projeto Exemplo 01</span>
+                        <a href="#">Visualizar</a>
+                    </li>
+                    <li>
+                        <span>Projeto Exemplo 02</span>
+                        <a href="#">Visualizar</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="downloads">Downloads úteis</h2>
+                <ul>
+                    <li>
+                        <span>Currículo Profissional (PDF)</span>
+                        <a href="#">Download</a>
+                    </li>
+                    <li>
+                        <span>Source Code (.zip)</span>
+                        <a href="#">Download</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 — Davi Coelho Almeida.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

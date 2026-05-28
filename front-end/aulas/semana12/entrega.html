@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="p-3">
+        <h1>Atividades</h1>
+        <p>Agora que você já treinou a leitura, é hora de escrever. Crie um arquivo index.html, importe o CSS do
+            Bootstrap via CDN e construa os três elementos abaixo usando apenas tags HTML básicas (&lt;div&gt;&lt;p&gt; e
+            &lt;span&gt;&lt;h1&gt;) e as classes do Bootstrap. </p>
+        <div class="pb-3">
+            <h2 class="fw-bold">Desafio A: O Alerta de Sucesso
+            </h2>
+            <ul>
+                <li>Crie uma caixa div.
+                </li>
+                <li>O fundo deve ser verde de sucesso e o texto claro (light).
+                </li>
+                <li>Deve ter um preenchimento interno (padding) de nível 3 em todos os lados.
+                </li>
+                <li>O “Operação realizada com sucesso!” deve estar centralizado e em itálico.
+                </li>
+                <li>Adicione cantos arredondados padrão.
+                </li>
+            </ul>
+            <div class="container text-center">
+                <div class="bg-success text-light rounded p-3 text-center fst-italic center">Operação realizada com
+                    sucesso!</div>
+                <div class="bg-success text-light rounded p-3 text-center fst-italic center">Operação realizada com
+                    sucesso!</div>
+                <div class="bg-success text-light rounded p-3 text-center fst-italic center">Operação realizada com
+                    sucesso!</div>
+            </div>
+        </div>
+        <div class="pb-3">
+            <h2 class="fw-bold">Desafio B: O Crachá (Badge)</h2>
+            <ul>
+                <li>Crie um texto comum em linha (span).
+                </li>
+                <li>Aplique um fundo escuro e o texto claro.
+                </li>
+                <li> A fonte deve ser bem pequena (escala 6) e com peso em negrito.
+                </li>
+                <li>Adicione preenchimento interno horizontal (eixo x) de nível 2 e vertical (eixo y) de nível 1.
+                </li>
+                <li>Arredonde os cantos ao máximo, em formato de pílula.
+                </li>
+            </ul>
+            <div class="container text-center">
+                <span class="bg-black text-light fs-6 fw-bold px-2 py-1 rounded-5 rounded-pill">Administrador</span>
+                <span class="bg-black text-light fs-6 fw-bold px-2 py-1 rounded-5 rounded-pill">Administrador</span>
+                <span class="bg-black text-light fs-6 fw-bold px-2 py-1 rounded-5 rounded-pill">Administrador</span>
+        </div>
+        </div>
+        <div class="pb-3">
+            <h2 class="fw-bold">Desafio C: O Cartão Fantasma </h2>
+            <ul>
+                <li>Crie uma caixa principal (div) com margem em todos os lados de nível 5. </li>
+                <li>Ela não deve ter cor de fundo, mas deve ter uma borda padrão com a cor do tema "info" (ciano). </li>
+                <li>Adicione uma sombra grande e deixe o elemento com 50% de opacidade.</li>
+                <li>Dentro dela, coloque um TITULO com o tamanho equivalente ao h2 e texto alinhado à direita.</li>
+            </ul>
+            <div class="container text-center">
+                <div class="m-5 shadow-lg opacity-50 border border-info fs-2 text-end">Título do cartão</div>
+                <div class="m-5 shadow-lg opacity-50 border border-info fs-2 text-end">Título do cartão</div>
+                <div class="m-5 shadow-lg opacity-50 border border-info fs-2 text-end">Título do cartão</div>
+            </div>
+            <div class="pb-3">
+                <h2 class="fw-bold">Desafio D: O Botão de Ação (Call to Action)</h2>
+                <ul>
+                    <li>Crie um link (<a>) vazio (com href="#") que tenha aparência de botão de destaque.</li>
+                    <li>Aplique o fundo principal azul (primary) e texto branco.</li>
+                    <li>O texto deve ter tamanho grande (escala 4) e peso em negrito.  </li>
+                    <li>O preenchimento interno nas laterais (eixo x) deve ser o máximo (nível 5) e na vertical (eixo y) deve ser nível 2.</li>
+                    <li>Arredonde os cantos e adicione uma sombra leve.  </li>
+                </ul>
+                <div class="container text-center">
+                    <a href="#" class="bg-primary text-light fs-4 fw-bold px-5 py-2 rounded shadow-sm text-center">Clique aqui</a>
+                    <a href="#" class="bg-primary text-light fs-4 fw-bold px-5 py-2 rounded shadow-sm text-center">Clique aqui</a>
+                    <a href="#" class="bg-primary text-light fs-4 fw-bold px-5 py-2 rounded shadow-sm text-center">Clique aqui</a>
+                </div>
+            </div>
+        </div>
+        <div class="pb-3">
+            <h2 class="fw-bold">Desafio E: O Banner de Alerta</h2>
+            <ul>
+                <li>Crie um parágrafo (&lt;p&gt;).</li>
+                <li>Use fundo amarelo de atenção (warning) com texto escuro (dark).</li>
+                <li>Ative a borda apenas no lado esquerdo (start), deixando-a com a espessura máxima (nível 5) e cor vermelha de erro (danger).</li>
+                <li>Adicione um preenchimento interno geral de nível 4 para afastar o texto da borda.</li>
+            </ul>
+            <div class="container text-center">
+                <p class="bg-warning text-dark border-start border-5 border-danger p-4">Verifique os dados antes de prosseguir.</p>
+                <p class="bg-warning text-dark border-start border-5 border-danger p-4">Verifique os dados antes de prosseguir.</p>
+                <p class="bg-warning text-dark border-start border-5 border-danger p-4">Verifique os dados antes de prosseguir.</p>
+            </div>
+        </div>
+        <div class="pb-3">
+            <h2 class="fw-bold">Desafio F: A Citação Elegante (Blockquote)</h2>
+            <ul>
+                <li>Crie uma caixa (Blockquote) com fundo preto (dark) e texto claro (light). </li>
+                <li> A opacidade de todo o elemento deve ser de 75%.</li>
+                <li>O texto deve estar em itálico, centralizado e com um espaçamento alto entre as linhas (lg).</li>
+                <li>Adicione um preenchimento interno vertical (eixo y) bem grande (nível 5) e horizontal (eixo x) médio (nível 3).</li>
+            </ul>
+            <div class="container text-center">
+                <blockquote class="bg-dark text-light opacity-75 fst-italic text-center py-5 px-3 lh-lg">"O design não é apenas o que parece e o que se sente. Design é como funciona."</blockquote>
+                <blockquote class="bg-dark text-light opacity-75 fst-italic text-center py-5 px-3 lh-lg">"O design não é apenas o que parece e o que se sente. Design é como funciona."</blockquote>
+                <blockquote class="bg-dark text-light opacity-75 fst-italic text-center py-5 px-3 lh-lg">"O design não é apenas o que parece e o que se sente. Design é como funciona."</blockquote>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

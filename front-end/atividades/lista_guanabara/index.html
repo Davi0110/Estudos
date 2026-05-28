@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Algoritimos Guanabara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="text-center">
+        <h1 class="fs-3">Exercícios de Algoritimos</h1>
+        <p>Prof. Gustavo Guanabara</p>
+    </header>
+    <section class="container">
+        <main>
+            <h1 class="fs-5 bg-warning">PASSO 01 - SEQUÊNCIAS BÁSICAS</h1>
+            <fieldset class="container"></fieldset>
+            <p>1) Escreva um programa que mostre na tela a mensagem "Olá, Mundo!"</p>
+            <button onclick="olaMundo()" type="button" class="btn btn-dark">ex001</button>
+
+            </fieldset>
+            <p>2) Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas para ela:
+                Ex:
+                Qual é o seu nome? João da Silva
+                Olá João da Silva, é um prazer te conhecer!</p>
+            <fieldset class="container">
+                <input type="textContent" id="ex002" placeholder="Digite o seu nome">
+                <button onclick="boasVindas()" type="button" class="btn btn-dark">ex002</button>
+
+            </fieldset>
+            <p>3) Crie um programa que leia o nome e o salário de um funcionário, mostrando no
+                final uma mensagem.
+                Ex:
+                Nome do Funcionário: Maria do Carmo
+                Salário: 1850,45
+                O funcionário Maria do Carmo tem um salário de R$1850,45 em Junho.</p>
+            <fieldset class="container">
+                <input type="textContent" id="ex003(1)" placeholder="Digite o seu nome">
+                <input type="value" id="ex003(2)" placeholder="Digite o seu salário">
+                <button onclick="infoFuncionarios()" type="button" class="btn btn-dark">ex003</button>
+            </fieldset>
+            <fieldset>
+                <p>4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório entre eles.
+                    Ex:
+                    Digite um valor: 8
+                    Digite outro valor: 5
+                    A soma entre 8 e 5 é igual a 13.</p>
+                <input type="value" id="ex004(1)" placeholder="Digite um número">
+                <input type="textContent" id="ex004(2)" placeholder="Digite um número">
+                <button onclick="somaInteiros()" type="button" class="btn btn-dark">ex004</button>
+            </fieldset>
+            <fieldset>
+                <p>5) Faça um programa que leia as duas notas de um aluno em uma matéria e mostre na tela a sua média na disciplina. 
+                Ex:  
+                Nota 1: 4.5 
+                Nota 2: 8.5 
+                A média entre 4.5 e 8.5 é igual a 6.5
+                </p>
+                <input type="value" id="ex005(1)" placeholder="Digite um número">
+                 <input type="value" id="ex005(2)" placeholder="Digite um número">
+                <button onclick="mediaNumeros()" type="button" class="btn btn-dark">ex005</button>
+            </fieldset>
+            <fieldset>
+                <p>6) Faça um programa que leia um número inteiro e mostre o seu antecessor e seu  sucessor. 
+                Ex:  
+                Digite um número: 9 
+                O antecessor de 9 é 8 
+                O sucessor de 9 é 10
+                </p>
+                <input type="value" id="ex006" placeholder="Digite um número">
+                <button onclick="antecessorSucessor()" type="button" class="btn btn-dark">ex006</button>
+            </fieldset>
+            <fieldset>
+                <p>7) Crie um algoritmo que leia um número real e mostre na tela o seu dobro e a sua terça parte. 
+                Ex:  
+                Digite um número: 3.5 
+                O dobro de 3.5 é 7.0 
+                A terça parte de 3.5 é 1.16666
+                </p>
+                <input type="value" id="ex007" placeholder="Digite um número">
+                <button onclick="dobroTriplo()" type="button" class="btn btn-dark">ex007</button>
+            </fieldset>
+        </main>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

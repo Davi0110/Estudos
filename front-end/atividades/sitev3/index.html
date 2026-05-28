@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Davi Coelho Almeida - Portfólio</title>
+
+    <!-- Tipografia: Syne (display geométrico distinto) + IBM Plex Mono (corpo técnico) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─────────────────────────────────────────────
+           Design System: Tactical Minimalism
+           Inspiração: interfaces de terminal militar
+           modernizadas com precisão editorial.
+        ───────────────────────────────────────────── */
+        :root {
+            --bg-primary:      #080a09;
+            --bg-surface:      #0e120f;
+            --military-green:  #4b634d;
+            --accent-green:    #7dab85;
+            --accent-bright:   #a8c9ae;
+            --text-primary:    #edf2ee;
+            --text-secondary:  #6b7d6e;
+            --text-dim:        #3d4d3f;
+            --border-subtle:   rgba(75, 99, 77, 0.18);
+            --border-accent:   rgba(125, 171, 133, 0.25);
+            --glow-green:      rgba(125, 171, 133, 0.06);
+            --max-width:       780px;
+        }
+
+        /* ─── Reset & Base ─── */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ─── Textura de fundo com noise SVG ─── */
+        body {
+            font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+            font-weight: 300;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.85;
+            padding: 88px 28px 60px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+
+            /* Grain overlay via SVG inline */
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+
+        /* Linha de scan vertical sutil no canto esquerdo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                var(--military-green) 30%,
+                var(--accent-green) 60%,
+                transparent 100%
+            );
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        /* ─── Header ─── */
+        header {
+            margin-bottom: 72px;
+            position: relative;
+        }
+
+        .subtitle {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-green);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Colchete tático antes do subtítulo */
+        .subtitle::before {
+            content: "[";
+            color: var(--military-green);
+            font-size: 0.85rem;
+        }
+        .subtitle::after {
+            content: "]";
+            color: var(--military-green);
+            font-size: 0.85rem;
+        }
+
+        h1 {
+            font-family: "Syne", sans-serif;
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            color: var(--text-primary);
+            margin-bottom: 28px;
+
+            /* Gradiente sutil no texto do nome */
+            background: linear-gradient(
+                135deg,
+                var(--text-primary) 0%,
+                var(--accent-bright) 60%,
+                var(--accent-green) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .intro-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 520px;
+            line-height: 1.9;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                var(--accent-green),
+                var(--border-subtle),
+                transparent
+            );
+            margin: 36px 0 0;
+            opacity: 0.4;
+        }
+
+        /* ─── Main Layout ─── */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+        }
+
+        /* ─── Títulos de Seção ─── */
+        h2 {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--military-green);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            margin-left: 20px;
+            background: linear-gradient(to right, var(--border-subtle), transparent);
+        }
+
+        /* Número de ordem tático no h2 */
+        h2::before {
+            content: "//";
+            margin-right: 10px;
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* ─── Parágrafos ─── */
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-primary);
+            opacity: 0.88;
+            line-height: 1.85;
+        }
+
+        /* ─── Listas ─── */
+        ul {
+            list-style: none;
+            display: grid;
+            gap: 0;
+        }
+
+        ul li {
+            padding: 14px 4px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            transition: background 0.2s ease;
+        }
+
+        /* Destaque no hover da linha — puro CSS */
+        ul li:hover {
+            background: var(--glow-green);
+        }
+
+        /* Barra de destaque lateral ao hover */
+        ul li::before {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            transform: translateY(-50%) scaleY(0);
+            width: 2px;
+            height: 60%;
+            background: var(--accent-green);
+            border-radius: 2px;
+            transition: transform 0.2s ease;
+        }
+
+        ul li:hover::before {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+        ul li span {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: 0.01em;
+        }
+
+        /* ─── Links ─── */
+        a {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--accent-green);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 0;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        /* Sublinhado animado nos links */
+        a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background: var(--accent-green);
+            transition: width 0.25s ease;
+        }
+
+        a:hover {
+            color: var(--accent-bright);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        /* ─── Status Dot (mantido do original) ─── */
+        .status-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            margin-top: 96px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-subtle);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        footer::before {
+            content: "■";
+            color: var(--military-green);
+            font-size: 0.5rem;
+        }
+
+        footer::after {
+            content: "■";
+            color: var(--military-green);
+            font-size: 0.5rem;
+        }
+
+        /* ─── Responsividade ─── */
+        @media (max-width: 600px) {
+            body {
+                padding: 56px 20px 48px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            body::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p class="subtitle">Desenvolvedor Front-End</p>
+            <h1>Davi Coelho Almeida</h1>
+            <p class="intro-text">Apaixonado por tecnologia e design. Bem-vindo à minha página de links! Aqui você encontrará meus principais projetos e redes sociais. Conecte-se comigo.</p>
+            <hr>
+        </header>
+
+        <main>
+            <section>
+                <h2 id="sobre-mim">Descrição sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima et eveniet exercitationem culpa repellat aliquam odio voluptatem nostrum maxime, dolorem possimus omnis beatae quis quaerat. Iste dignissimos facilis nostrum perferendis?</p>
+            </section>
+
+            <section>
+                <h2 id="redes-sociais">Minhas redes sociais</h2>
+                <ul>
+                    <li>
+                        <span>GitHub</span>
+                        <a href="https://github.com/Davi0110" target="_blank">Acessar perfil</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="projetos">Meus projetos anteriores</h2>
+                <ul>
+                    <li>
+                        <span>Projeto Exemplo 01</span>
+                        <a href="#">Visualizar</a>
+                    </li>
+                    <li>
+                        <span>Projeto Exemplo 02</span>
+                        <a href="#">Visualizar</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="downloads">Downloads úteis</h2>
+                <ul>
+                    <li>
+                        <span>Currículo profissional (PDF)</span>
+                        <a href="#">Download</a>
+                    </li>
+                    <li>
+                        <span>Baixar projeto completo (.zip)</span>
+                        <a href="#">Download</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 — Davi Coelho Almeida.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
