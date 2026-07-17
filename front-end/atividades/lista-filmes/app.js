@@ -26,3 +26,4 @@ inputItem.addEventListener('keypress', (event) => {
         adicionarFilme(event);
     }
 });
+
