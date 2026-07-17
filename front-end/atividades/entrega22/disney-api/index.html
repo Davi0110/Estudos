@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 24 - Fetch Disney Characters</title>
+    <script src="app.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Disney+</h1>
+
+        <p>
+            Imagine que você está desenvolvendo uma plataforma de streaming e precisa
+            gerar os cards dos personagens mais famosos da Disney.
+        </p>
+
+        <p>
+            Para isso, você deverá consultar uma API pública e obter informações
+            sobre os personagens através de seus respectivos nomes.
+        </p>
+    </header>
+
+    <main>
+
+        <p>
+            <b>API Base:</b>
+            https://api.disneyapi.dev/
+                Disney API
+            </a>
+        </p>
+
+        <h2>Instruções</h2>
+
+        <ul>
+
+            <li>
+                Crie uma função assíncrona responsável por buscar os dados de um
+                personagem da Disney utilizando seu nome.
+            </li>
+
+            <li>
+                A função deve realizar uma requisição para a API e tratar possíveis
+                falhas durante a busca.
+            </li>
+
+            <li>
+                Monte uma lista contendo 4 nomes de personagens da Disney.
+            </li>
+
+            <li>
+                Pelo menos um dos nomes deve ser inválido para demonstrar o
+                tratamento de erros da aplicação.
+            </li>
+
+            <li>
+                Utilize o método <code>.map()</code> para iniciar as buscas dos
+                personagens presentes na lista.
+            </li>
+
+            <li>
+                Aguarde a conclusão de todas as requisições utilizando
+                <code>Promise.all()</code>.
+            </li>
+
+            <li style="background-color:#fff3cd; padding:8px; border-left:4px solid #ffc107;">
+                <strong>Atenção:</strong> Analise que nesta atividade na API não retornará os
+                dados do personagem. Na verdade, com esta busca você receberá a lista de 
+                (<code>films</code>) das quais cada personagem participou.
+            </li>
+
+            <li>
+                Ao final, exiba no console apenas os personagens encontrados com
+                sucesso e suas respectivas listas de produções.
+            </li>
+
+            <li>
+                O programa deve continuar executando normalmente mesmo que uma ou
+                mais buscas retornem erro.
+            </li>
+
+        </ul>
+
+        <hr>
+
+        <h2>Resultado Esperado</h2>
+
+        <p>
+            Ao término da execução, o console deverá apresentar um array contendo
+            apenas os personagens válidos retornados pela API.
+        </p>
+
+        <p>
+            Cada item exibido deverá permitir a identificação do personagem e das
+            produções da Disney nas quais ele participou.
+        </p>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes favoritos</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Histórico do Sistema</h1>
+
+    <button id="btn_registrar">Registrar Ação</button>
+
+    <div id="container_historico">
+        <!-- Os logs entrarão aqui -->
+    </div>
+
+    <!-- Instruções -->
+    <div class="atividade-instrucoes">
+        <p>Você precisa criar um sistema simples de log de ações. Toda vez que o usuário clicar no botão "Registrar
+            Ação", a aplicação deve registrar a data e o horário exatos em que a ação ocorreu na tela.</p>
+
+        <p><strong>Para isso, você precisa:</strong></p>
+
+        <ul>
+            <li>Usar o <code>document.getElementById</code> para capturar o botão de registrar e a
+                <code>&lt;div&gt;</code> que servirá como container do histórico;
+            </li>
+
+            <li>Adicionar um evento de clique (<code>addEventListener</code>) ao botão;</li>
+
+            <li>Dentro do evento de clique, criar as seguintes instruções DENTRO de uma <em>arrow function</em> (ação
+                não nomeada):
+                <ul>
+                    <li>Criar um novo elemento de parágrafo (<code>&lt;p&gt;</code>) com a ajuda do
+                        <code>document.createElement</code>;
+                    </li>
+
+                    <li>Capturar o momento exato do clique instanciando a classe <code>Date()</code>, usando
+                        <code>new Date()</code>;
+                    </li>
+
+                    <li>Formatar essa data para o padrão brasileiro, para que ela fique no formato <em>dd/mm/aaaa
+                            hh:mm:ss</em>.
+
+                        <div class="dica-destaque">
+                            <strong>💡 Dica:</strong> Vá até a documentação do <em><a
+                                    href="https://www.w3schools.com/jsref/jsref_tolocalestring.asp"
+                                    target="_blank">W3Schools</a></em> ou <em><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString"
+                                    target="_blank">MDN Web Docs</a></em> e pesquise sobre a classe <code>Date</code> e
+                            o método
+                            <code>.toLocaleString()</code> ou <code>.toLocaleDateString()</code>. Eles farão o trabalho
+                            pesado da formatação para você, e é uma habilidade que vocês PRECISAM aprender!
+                        </div>
+
+                    </li>
+
+                    <li>Inserir o texto "Ação registrada em <em>data</em>" dentro do parágrafo criado através do <code>textContent</code>;</li>
+
+                    <li>Por fim, incluir esse novo parágrafo visualmente dentro da <code>&lt;div&gt;</code> do histórico utilizando o <code>appendChild</code>.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

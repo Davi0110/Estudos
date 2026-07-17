@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 22 - Fetch Pokémon</title>
+    <script src="poke-api.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>PokeDex</h1>
+        <p>
+            Imagine que esta page é um lugar onde você irá mostrar os cards de Pokemon, como se fosse uma Pokedex, e
+            você
+            precisa puxar as informações e montar um time. Para isto você irá acessar o site abaixo, e utilizar o
+            endpoint
+            de busca de Pokemons.
+        </p>
+    </header>
+    <main>
+
+        <p><b>API Base: </b><a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+
+        <h2>Instruções</h2>
+        <ul>
+            <li>O código deve tentar buscar 4 pokemons <i>(por nome)</i> através de um array, e exibi-lo no console.
+            </li>
+            <li>Caso algum pokemon não seja encontrado, o código deve exibir uma mensagem de erro no console, mas
+                continuar buscando os demais pokemons.</li>
+            <li>Ao final, o código deve exibir no console um array com os pokemons encontrados, e ignorar os que não
+                foram encontrados.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Passo a Passo</h2>
+
+        <ol>
+            <li>Crie uma função assíncrona que irá buscar os pokemons através do endpoint da PokeAPI, onde:
+                <ul>
+                    <em>
+                        <li>Cria a função assincrona e recebe o nome do pokemon como parâmetro;</li>
+                        <li>Faz uma requisição HTTP (link da url) para o endpoint da PokeAPI;</li>
+                        <li>Verifica o status da resposta e lança um erro caso o pokemon não seja encontrado;</li>
+                        <li>Retorna os dados do pokemon em caso de sucesso;</li>
+                    </em>
+                </ul>
+                <pre style="background-color:#f4f4f4; padding:10px;">
+<code>
+
+<span style="display:block; background-color:rgb(255,248,196); padding:8px;">
+// Cria a função assíncrona e recebe o nome do pokemon como parâmetro
+async function buscarPokemon(nome) {<span style="display:block; background-color:rgb(175,243,243); padding:6px;">    /*Faz uma requisição HTTP para o endpoint da PokeAPI.
+    O await aguarda a Promise retornada pelo fetch ser resolvida. */
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`);<span style="display:block; background-color:rgb(233,122,122); padding:6px;">        // Verifica se a resposta HTTP foi bem-sucedida (com base no status da resposta do servidor.)
+        if (!response.ok) {
+            throw new Error(`Pokémon "${nome}" não foi encontrado no banco de dados.`);
+        }</span><span style="display:block; background-color:rgb(124,233,122); padding:6px;">        // Converte a resposta para JSON e retorna os dados do Pokémon:
+        const pokemonConvertido = await response.json();
+        return pokemonConvertido;
+    </span>    }</span><span style="display:block; background-color:rgb(255,205,210); padding:6px;">    // Captura e exibe o erro de forma controlada
+    catch (error) {
+        console.warn("Aviso de erro tratado:", error.message);
+
+        // Retorna null para indicar falha sem interromper a execução
+        return null;
+    }
+    </span>}
+</span>
+
+</code>
+</pre>
+            </li>
+            <li>Crie um array com 4 nomes de pokemons, sendo que pelo menos 1 deles não deve existir, e utilize o método <code>.map</code> para chamar a função de busca para cada pokemon do array. <em>Nota: 'agumon' é um digimon, e está sendo inserido para demonstrar o tratamento de erros.</em>
+                <pre style="background-color: #f4f4f4; padding: 10px;">
+                    <code>
+        let timePokemon = ['pikachu', 'charizard', 'mewtwo', 'agumon'];
+        let promisesPokemon = timePokemon.map(nome => buscarPokemon(nome));
+                </code></pre>
+                </p>
+            </li>
+            <li>Utilize o <code>Promise.all()</code> para aguardar todas as promises serem resolvidas, e depois um <code>console.log()</code> para exibir o resultado final, filtrando os valores nulos.
+                <pre style="background-color: #f4f4f4; padding: 10px;">
+                    <code>
+        Promise.all(promisesPokemon).then(resultadoFinal => {
+            // Filtra os nulls gerados pelos erros se quiserem uma lista 100% limpa
+            const esquadraoValido = resultadoFinal.filter(p => p !== null);
+            console.log("Esquadrão Pronto para os Web Components:", esquadraoValido);
+        });
+                    </code></pre>
+            </li>
+
+
+    </main>
+</body>
+
+</html>

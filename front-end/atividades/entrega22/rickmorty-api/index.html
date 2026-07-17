@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 23 - Fetch Rick and Morty</title>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Streaming Characters</h1>
+
+        <p>
+            Imagine que esta página faz parte de uma plataforma de streaming e que você precisa gerar os cards dos personagens principais da série internacionalmente conhecida como <i>Rick and Morty</i>.
+        </p>
+
+        <p>
+            Para isso, você deverá consultar uma API pública e obter os dados dos personagens através
+            de seus respectivos IDs.
+        </p>
+    </header>
+
+    <main>
+
+        <p>
+            <b>API Base:</b>
+    
+            <a href="https://rickandmortyapi.com/" target="_blank">Rick and Morty API</a>
+            </a>
+        </p>
+
+        <h2>Instruções</h2>
+
+        <ul>
+            <li>
+                Crie uma função assíncrona responsável por buscar os dados de um personagem da
+                série <i>Rick and Morty</i> utilizando seu <b>ID</b>.
+            </li>
+
+            <li>
+                A função deve realizar a requisição para a API e tratar situações em que o
+                personagem não seja encontrado.
+            </li>
+
+            <li>
+                Monte uma lista contendo 4 IDs de personagens, sendo que pelo menos um deles
+                deve ser inválido para demonstrar o tratamento de erros.
+            </li>
+
+            <li>
+                Utilize o método <code>.map()</code> para disparar as buscas dos personagens.
+            </li>
+
+            <li>
+                Aguarde a conclusão de todas as requisições utilizando
+                <code>Promise.all()</code>.
+            </li>
+
+            <li>
+                Ao final, exiba no console apenas os personagens encontrados,
+                ignorando os resultados inválidos.
+            </li>
+
+            <li>
+                O programa não deve interromper sua execução caso uma das buscas falhe.
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Resultado Esperado</h2>
+
+        <p>
+            Ao finalizar a execução, o console deve apresentar um array contendo apenas
+            os personagens válidos retornados pela API.
+        </p>
+
+    </main>
+</body>
+
+</html>

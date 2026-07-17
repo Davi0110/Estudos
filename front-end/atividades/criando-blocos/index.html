@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes favoritos</title>
+    <script defer src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="container py-5">
+
+    <h1 class="mb-4">Blocos Virtuais</h1>
+
+    <div class="row mb-4">
+        <div class="col-md-6 d-flex gap-2">
+            <input type="text" id="input_nome" class="form-control" placeholder="Digite seu nome">
+            <button id="btn_bloco" class="btn btn-primary text-nowrap">Criar Bloco</button>
+        </div>
+    </div>
+
+    <section id="area_galeria" class="d-flex flex-wrap gap-3">
+        <!-- Os blocos entrarão aqui -->
+    </section>
+
+
+
+
+    
+        <!-- Instruções -->
+    <div class="card border-primary m-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title text-primary fw-bold mb-3">🛠️ Missão: Galeria de blocos</h5>
+            <p class="card-text">Crie blocos virtuais na tela! A ação deve ocorrer quando o usuário <strong>clicar no
+                    botão</strong> ou apertar a tecla <strong>Enter</strong>.</p>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item border-0 pb-0">
+                    Capture o <code>input</code>, o <code>botão</code> e a <code>&lt;section&gt;</code> usando
+                    <code>document.getElementById</code>.
+                </li>
+
+                <li class="list-group-item border-0 pb-0">
+                    Crie uma função para gerar o bloco com os seguintes passos:
+                    <ul class="mt-2 text-secondary">
+                        <li>Se o campo estiver vazio, mostre um <code>alert()</code> e pare a execução com
+                            <code>return</code>;
+                        </li>
+                        <li>Crie uma nova <code>&lt;div&gt;</code> usando <code>document.createElement</code>;</li>
+                        <li>Insira o nome digitado na div usando o <code>textContent</code>;</li>
+                        <li>Injete o visual do Bootstrap usando o <code>classList.add</code> com as seguintes
+                            formatações: <span class="badge text-dark">fundo verde, texto branco, bordas arredondadas e
+                                peso da fonte em negrito;</span></li>
+                        <li>Faça o bloco aparecer na tela colocando-o na section com <code>appendChild</code>;</li>
+                        <li>Limpe o campo de texto (<code>value = ''</code>).</li>
+                    </ul>
+                </li>
+
+                <li class="list-group-item border-0">
+                    Conecte essa função a <strong>dois</strong> ouvintes de eventos (<code>addEventListener</code>):
+                    <ul class="mt-2 text-secondary">
+                        <li>Um evento de <code>'click'</code> no botão;</li>
+                        <li>Um evento de <code>'keypress'</code> no input.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert alert-warning py-2 mb-0 border-warning" role="alert">
+                <strong>💡 Dica:</strong> Para o evento de teclado, capture o evento na função
+                <code>(event) => { ... }</code>, verifique se a tecla que foi pressionada é o Enter usando
+                <code>if (event.key == 'Enter')</code>, e passe este 'event' para a função que cria o bloco.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
