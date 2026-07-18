@@ -1,4 +1,4 @@
-﻿import { buscarEnderecoPorCep } from './viaCepService.js';
+﻿import {buscarEnderecoPorCep} from './viaCepService.js';
 
 // Importa as funções responsáveis pela manipulação visual da página (UI/View)
 import {
